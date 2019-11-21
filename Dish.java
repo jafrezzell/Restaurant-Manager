@@ -11,6 +11,7 @@ public class Dish {
 	protected ArrayList<Ingredient> requiredIngredients;//Ingredients required to make dish
 	protected double priceToMake;//Price to make dish
 	protected double priceToSell;//Price of dish to sell to customer
+	protected String notes;
 	//protected static int timesOrdered;//amount of times dish was ordered
 	//protected double cookTime;//how long it takes to cook dish
 	
@@ -28,6 +29,7 @@ public class Dish {
 			this.priceToMake+=ingredient.restaurantPrice;
 			this.priceToSell+=ingredient.customerPrice;
 		}
+		this.notes = "";
 	}//end Dish()
 
 	
@@ -59,5 +61,13 @@ public class Dish {
 		return this.priceToSell;
 	}//end priceToSell()
 	
-	
+//////////////////////SETTERS
+	/**
+	 * Sets notes to newNotes
+	 * @param newNotes New notes to be set
+	 */
+	public void setNotes(String newNotes)
+	{
+		this.notes = newNotes;
+	}
 }
