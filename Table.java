@@ -29,4 +29,8 @@ public class Table{
   public void setCustomers(int num){
     this.customers = num;
   }   
+  @Override
+  public String toString(){
+    return ("Table" + tableNumber);
+  }
 }
