@@ -1,14 +1,16 @@
 import java.util.ArrayList;
 public class Server extends Employee{
   protected double tips;
+  protected double hourlyWage;
   ArrayList <Table> tables=new ArrayList<Table>();
-  public Server(String name, String employeeId, double tips){
+  public Server(String name, String employeeId, double hourlyWage){
     super(name, employeeId);
-    this.tips=tips;}
-  public double getTips(){
-    return this.tips;}
-  public void setTips(double tips){
-    this.tips=tips;}
+    this.hourlyWage=hourlyWage;
+    tips=0;}
+  public double getHourlyWage(){
+    return this.hourlyWage;}
+  public void setHourlyWage(double hourlyWage){
+    this.hourlyWage=hourlyWage;}
   public void addTips(double amount){
     tips+=amount;}
   /*public void fillTables(ArrayList <Customer> tables){
