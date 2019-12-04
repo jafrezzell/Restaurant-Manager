@@ -76,14 +76,18 @@ public class Restaurant {
 		requiredIngredients.add(groundBeef);
 		
 		//////////////////APPETIZER DISHES
-		Dish Nachos = new Dish("Nachos",requiredIngredients);
+		Ingredient[] nachoIngredients = new Ingredient[requiredIngredients.size()];
+		requiredIngredients.toArray(nachoIngredients);
+		Dish Nachos = new Dish("Nachos",nachoIngredients);
 		Dishes.add(Nachos);
 		requiredIngredients.clear();
 		
 		requiredIngredients.add(chickenSauce);
 		requiredIngredients.add(Celery);
 		requiredIngredients.add(Ranch);
-		Dish Wings = new Dish("Wings", requiredIngredients);
+		Ingredient[] wingIngredients = new Ingredient[requiredIngredients.size()];
+		requiredIngredients.toArray(wingIngredients);
+		Dish Wings = new Dish("Wings", wingIngredients);
 		Dishes.add(Wings);
 		requiredIngredients.clear();
 		//////////////////END APPETIZER DISHES
@@ -97,7 +101,9 @@ public class Restaurant {
 		requiredIngredients.add(Lettuce);
 		requiredIngredients.add(Mustard);
 		requiredIngredients.add(Ketchup);
-		Dish Burger = new Dish("Burger", requiredIngredients);
+		Ingredient[] burgerIngredients = new Ingredient[requiredIngredients.size()];
+		requiredIngredients.toArray(burgerIngredients);
+		Dish Burger = new Dish("Burger", burgerIngredients);
 		Dishes.add(Burger);
 		requiredIngredients.clear();
 		
@@ -106,7 +112,9 @@ public class Restaurant {
 		requiredIngredients.add(Lettuce);
 		requiredIngredients.add(Tomato);
 		requiredIngredients.add(Mayo);
-		Dish grilledChickenSandwich = new Dish("Grilled Chicken Sandwich", requiredIngredients);
+		Ingredient[] chickenSandwichIngredients = new Ingredient[requiredIngredients.size()];
+		requiredIngredients.toArray(chickenSandwichIngredients);
+		Dish grilledChickenSandwich = new Dish("Grilled Chicken Sandwich", chickenSandwichIngredients);
 		Dishes.add(grilledChickenSandwich);
 		requiredIngredients.clear();
 		
@@ -114,7 +122,9 @@ public class Restaurant {
 		requiredIngredients.add(Crust);
 		requiredIngredients.add(Pepperoni);
 		requiredIngredients.add(marinaraSauce);
-		Dish Pizza = new Dish("Pizza", requiredIngredients);
+		Ingredient[] pizzaIngredients = new Ingredient[requiredIngredients.size()];
+		requiredIngredients.toArray(pizzaIngredients);
+		Dish Pizza = new Dish("Pizza", pizzaIngredients);
 		Dishes.add(Pizza);
 		requiredIngredients.clear();
 		/////////////END ENTREE DISHES
@@ -122,20 +132,26 @@ public class Restaurant {
 		
 		//////////////DRINK DISHES
 		requiredIngredients.add(Water);
-		Dish DWater = new Dish("Water",requiredIngredients);
+		Ingredient[] waterIngredients = new Ingredient[requiredIngredients.size()];
+		requiredIngredients.toArray(waterIngredients);
+		Dish DWater = new Dish("Water",waterIngredients);
 		Dishes.add(DWater);
 		requiredIngredients.clear();
 		
 		requiredIngredients.add(Water);
 		requiredIngredients.add(Syrup);
-		Dish Soda = new Dish("Soda", requiredIngredients);
+		Ingredient[] sodaIngredients = new Ingredient[requiredIngredients.size()];
+		requiredIngredients.toArray(sodaIngredients);
+		Dish Soda = new Dish("Soda", sodaIngredients);
 		Dishes.add(Soda);
 		requiredIngredients.clear();
 		
 		requiredIngredients.add(Water);
 		requiredIngredients.add(Tea);
 		requiredIngredients.add(Syrup);
-		Dish icedTea = new Dish("Iced Tea", requiredIngredients);
+		Ingredient[] teaIngredients = new Ingredient[requiredIngredients.size()];
+		requiredIngredients.toArray(teaIngredients);
+		Dish icedTea = new Dish("Iced Tea", teaIngredients);
 		Dishes.add(icedTea);
 		requiredIngredients.clear();
 		////////////END DRINK DISHES
