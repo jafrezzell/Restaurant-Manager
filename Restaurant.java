@@ -26,7 +26,7 @@ public class Restaurant {
 		
 		
 		//INGREDIENTS
-		Ingredient chickenSauce = new Ingredient("Chicken Sauce",1.00,2.00);
+		Ingredient chickenSauce = new Ingredient("Chicken_Sauce",1.00,2.00);
 		Ingredients.add(chickenSauce);
 		Ingredient Celery = new Ingredient("Celery",1.50,0.99);
 		Ingredients.add(Celery);
@@ -40,7 +40,7 @@ public class Restaurant {
 		Ingredients.add(Tomato);
 		Ingredient Jalapeno = new Ingredient("Jalapeno",7.50,5.00);
 		Ingredients.add(Jalapeno);
-		Ingredient groundBeef = new Ingredient("Ground Beef",15.50,10.00);
+		Ingredient groundBeef = new Ingredient("Ground_Beef",15.50,10.00);
 		Ingredients.add(groundBeef);
 		Ingredient Bun = new Ingredient("Bun",2.50,.99);
 		Ingredients.add(Bun);
@@ -58,7 +58,7 @@ public class Restaurant {
 		Ingredients.add(Crust);
 		Ingredient Pepperoni = new Ingredient("Pepperoni",1.50,.99);
 		Ingredients.add(Pepperoni);
-		Ingredient marinaraSauce = new Ingredient("Marinara Sauce",5.00,3.50);
+		Ingredient marinaraSauce = new Ingredient("Marinara_Sauce",5.00,3.50);
 		Ingredients.add(marinaraSauce);
 		Ingredient Water = new Ingredient("Water",0.00,0.00);
 		Ingredients.add(Water);
@@ -114,7 +114,7 @@ public class Restaurant {
 		requiredIngredients.add(Mayo);
 		Ingredient[] chickenSandwichIngredients = new Ingredient[requiredIngredients.size()];
 		requiredIngredients.toArray(chickenSandwichIngredients);
-		Dish grilledChickenSandwich = new Dish("Grilled Chicken Sandwich", chickenSandwichIngredients);
+		Dish grilledChickenSandwich = new Dish("Grilled_Chicken_Sandwich", chickenSandwichIngredients);
 		Dishes.add(grilledChickenSandwich);
 		requiredIngredients.clear();
 		
@@ -151,7 +151,7 @@ public class Restaurant {
 		requiredIngredients.add(Syrup);
 		Ingredient[] teaIngredients = new Ingredient[requiredIngredients.size()];
 		requiredIngredients.toArray(teaIngredients);
-		Dish icedTea = new Dish("Iced Tea", teaIngredients);
+		Dish icedTea = new Dish("Iced_Tea", teaIngredients);
 		Dishes.add(icedTea);
 		requiredIngredients.clear();
 		////////////END DRINK DISHES
