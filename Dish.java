@@ -1,3 +1,5 @@
+package Classes;
+
 import java.util.ArrayList;
 
 /**
@@ -8,10 +10,13 @@ import java.util.ArrayList;
 public class Dish {
 	
 	protected String dishName;//Name of dish
-	protected ArrayList<Ingredient> requiredIngredients;//Ingredients required to make dish
+	protected Ingredient[] requiredIngredients;//Ingredients required to make dish
 	protected double priceToMake;//Price to make dish
 	protected double priceToSell;//Price of dish to sell to customer
 	protected String notes;
+	//Sam Irvin
+	protected int tableNum;
+	//end Sam Irvin
 	//protected static int timesOrdered;//amount of times dish was ordered
 	//protected double cookTime;//how long it takes to cook dish
 	
@@ -20,6 +25,7 @@ public class Dish {
 	 * @param dishName: Name of dish
 	 * @param requiredIngredients: Required Ingredients
 	 */
+	/*
 	public Dish(String dishName, ArrayList<Ingredient>requiredIngredients)
 	{
 		this.dishName = dishName;
@@ -30,9 +36,41 @@ public class Dish {
 			this.priceToSell+=ingredient.customerPrice;
 		}
 		this.notes = "";
+		//Sam Irvin
+		tableNum = -1;
+		//end Sam Irvin
 	}//end Dish()
-
+*/
+	public Dish(String dishName, Ingredient[] requiredIngredients)
+	{
+		this.dishName = dishName;
+		this.requiredIngredients = requiredIngredients;
+		for(Ingredient ingredient: this.requiredIngredients)
+		{
+			this.priceToMake+=ingredient.restaurantPrice;
+			this.priceToSell+=ingredient.customerPrice;
+		}
+		this.notes = "";
+		//Sam Irvin
+		tableNum = -1;
+		//end Sam Irvin
+	}//end Dish()
 	
+	//Sam Irvin
+	//For the Make copy Dishes
+	public Dish(String dishName, Ingredient[] requiredIngredients, String note, int tab)
+	{
+		this.dishName = dishName;
+		this.requiredIngredients = requiredIngredients;
+		for(Ingredient ingredient: this.requiredIngredients)
+		{
+			this.priceToMake+=ingredient.restaurantPrice;
+			this.priceToSell+=ingredient.customerPrice;
+		}
+		this.notes = note;
+		tableNum = tab;
+	}
+	//End Sam Irvin
 //////////////////////////////////GETTERS	
 	/**
 	 * Returns name of dish
@@ -61,6 +99,20 @@ public class Dish {
 		return this.priceToSell;
 	}//end priceToSell()
 	
+	//Sam Irvin
+	public String getNotes() {
+		return this.notes;
+	}
+	
+	public Ingredient[] getIngredients(){
+		return this.requiredIngredients;
+	}
+	
+	public int getTableNum() {
+		return tableNum;
+	}
+	//end Sam Irvin
+	
 //////////////////////SETTERS
 	/**
 	 * Sets notes to newNotes
@@ -70,4 +122,18 @@ public class Dish {
 	{
 		this.notes = newNotes;
 	}
+	
+	//Sam Irvin
+	public void setTableNum(int num) {
+		tableNum = num;
+	}
+	//end Sam Irvin
+	
+	
+	public Dish makeCopy() {
+		return new Dish(dishName, requiredIngredients, notes, tableNum);
+	}
+	
+	
+	
 }

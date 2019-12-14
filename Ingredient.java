@@ -1,3 +1,5 @@
+package Classes;
+
 /**
  * 
  * @author jafre
@@ -54,5 +56,12 @@ public class Ingredient {//FIXME
 		return this.restaurantPrice;
 	}//end getRestaurantPrice()
 
+	
+	//Sam Irvin
+	public String toString() {
+		return this.name;
+	}
+	
+	
 	
 }
