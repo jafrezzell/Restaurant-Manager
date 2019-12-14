@@ -2,8 +2,8 @@ import java.util.ArrayList;
 public class Server extends Employee{
   protected double tips;
   ArrayList <Table> tables=new ArrayList<Table>();
-  public Server(String name, String employeeId, double hourlyWage){
-    super(name, employeeId, hourlyWage);
+  public Server(String name, String employeeId, double hourlyWage, double amountMade){
+    super(name, employeeId, hourlyWage, amountMade);
     tips=0;}
   public void addTips(double amount){
     tips+=amount;}
