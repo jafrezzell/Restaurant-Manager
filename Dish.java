@@ -10,7 +10,8 @@ import java.util.ArrayList;
 public class Dish {
 	
 	protected String dishName;//Name of dish
-	protected Ingredient[] requiredIngredients;//Ingredients required to make dish
+	//protected Ingredient[] requiredIngredients;//Ingredients required to make dish
+	protected ArrayList<Ingredient> requiredIngredients;
 	protected double priceToMake;//Price to make dish
 	protected double priceToSell;//Price of dish to sell to customer
 	protected String notes;
@@ -41,7 +42,7 @@ public class Dish {
 		//end Sam Irvin
 	}//end Dish()
 */
-	public Dish(String dishName, Ingredient[] requiredIngredients)
+	public Dish(String dishName, ArrayList<Ingredient> requiredIngredients)
 	{
 		this.dishName = dishName;
 		this.requiredIngredients = requiredIngredients;
@@ -58,7 +59,7 @@ public class Dish {
 	
 	//Sam Irvin
 	//For the Make copy Dishes
-	public Dish(String dishName, Ingredient[] requiredIngredients, String note, int tab)
+	public Dish(String dishName, ArrayList<Ingredient> requiredIngredients, String note, int tab)
 	{
 		this.dishName = dishName;
 		this.requiredIngredients = requiredIngredients;
@@ -104,7 +105,7 @@ public class Dish {
 		return this.notes;
 	}
 	
-	public Ingredient[] getIngredients(){
+	public ArrayList<Ingredient> getIngredients(){
 		return this.requiredIngredients;
 	}
 	
