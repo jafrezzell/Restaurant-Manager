@@ -9,7 +9,7 @@ import java.util.Scanner;
 
 /**
  * 
- * @author jafre
+ * @author Joshua Frezzell
  *Class created for the purpose of managers to manage overall restaurant functionalities (such as add/removing employees, updating the menu, etc.)
  */
 public class Manager extends Employee{
