@@ -1,3 +1,5 @@
+package Classes;
+
 import java.util.ArrayList;
 /**
 *
@@ -14,13 +16,16 @@ public class Server extends Employee{
   * @param hourlyWage: Amount server makes per hour
   * @param amountMade: Amount server made that day
   */
-  public Server(String name, String employeeId, double hourlyWage, double amountMade){
-    super(name, employeeId, hourlyWage, amountMade);
+  public Server(String name, String employeeId, double hourlyWage){
+    super(name, employeeId, hourlyWage);
     tips=0;}
+  
   public void addTips(double amount){ //adds tips to amount
     tips+=amount;}
+  
   public double getTips(){ //getter for tips
     return this.tips;}
+  
   public void setTips(double tips){ //setter for tips
     this.tips=tips;}
 }
