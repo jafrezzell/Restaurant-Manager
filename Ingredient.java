@@ -2,10 +2,10 @@ package Classes;
 
 /**
  * 
- * @author jafre
+ * @author Joshua Frezzell
  *Class that represents the ingredients in a specified dish
  */
-public class Ingredient {//FIXME
+public class Ingredient {
 	
 	protected String name;//Name of the ingredient
 	protected int amountRemaining;//Amount of ingredient remaining in the restaurant
