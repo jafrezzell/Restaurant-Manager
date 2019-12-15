@@ -1,6 +1,6 @@
 /**
  * Main method for restaurant manager system
- * @author jafre
+ * @author Joshua Frezzell
  */
 public class Restaurant {
 	
