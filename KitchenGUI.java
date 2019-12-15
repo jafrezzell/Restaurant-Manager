@@ -434,7 +434,9 @@ public class KitchenGUI extends JFrame {
 		return total;
 	}
 	
-	
+	public ArrayList<Dish> getCooked(){
+		return cooked;
+	}
 	
 	
 }

@@ -26,6 +26,8 @@ import javax.swing.JPopupMenu;
 import java.awt.Component;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.util.ArrayList;
+
 import javax.swing.JTextField;
 import javax.swing.event.ListSelectionListener;
 import javax.swing.event.ListSelectionEvent;
@@ -369,5 +371,9 @@ public class ServerGUI extends JFrame {
 	
 	public double getFoodSpent() {
 		return kitchen.calcFoodSpent();
+	}
+	
+	public ArrayList<Dish> getCooked(){
+		return kitchen.getCooked();
 	}
 }

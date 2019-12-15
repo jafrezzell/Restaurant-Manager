@@ -16,6 +16,7 @@ import com.jgoodies.forms.layout.FormLayout;
 import com.jgoodies.forms.layout.ColumnSpec;
 import com.jgoodies.forms.layout.RowSpec;
 import java.awt.event.ActionListener;
+import java.io.File;
 import java.util.ArrayList;
 import java.awt.event.ActionEvent;
 import javax.swing.UIManager;
@@ -27,6 +28,7 @@ public class HomePageGUI extends JFrame {
 	//variables
 	private Dish toOrder;
 	private int tableNumber;
+	
 	
 	//GUis
 	SignIn signIn;
@@ -69,13 +71,9 @@ public class HomePageGUI extends JFrame {
 		setBackground(Color.LIGHT_GRAY);
 		setForeground(Color.BLACK);
 		setTitle("Home");
-		System.out.println("1");
 		Initialize();
-		System.out.println("2");
 		InitializeCode();
-		System.out.println("3");
 		Events();
-		System.out.println("4");
 	}
 
 	
@@ -154,6 +152,7 @@ public class HomePageGUI extends JFrame {
 				report.setWagesSpent(signIn.getWagesSpent());
 				report.setFoodEarned(server.getFoodIncome());
 				report.setFoodSpent(server.getFoodSpent());
+				//report.setPopDish(calcPopDish(server.getCooked(), RestarauntInfo.getDishes()));
 				report.setVisible(true);
 			}
 		});
@@ -177,6 +176,6 @@ public class HomePageGUI extends JFrame {
 		kitchen.addDish(toOrder);
 	}
 	
-	
+
 	
 }

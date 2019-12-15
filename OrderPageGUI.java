@@ -312,8 +312,10 @@ public class OrderPageGUI extends JFrame {
 		requiredIngredients.add(groundBeef);
 		
 		//////////////////APPETIZER DISHES
-		Ingredient[] nachoIngredients = new Ingredient[requiredIngredients.size()];
-		requiredIngredients.toArray(nachoIngredients);
+		ArrayList<Ingredient> nachoIngredients = new ArrayList<Ingredient>(requiredIngredients.size());
+		for(Ingredient ing: requiredIngredients) {
+			nachoIngredients.add(ing);
+		}
 		Nachos = new Dish("Nachos",nachoIngredients);
 		Dishes.add(Nachos);
 		requiredIngredients.clear();
@@ -321,8 +323,10 @@ public class OrderPageGUI extends JFrame {
 		requiredIngredients.add(chickenSauce);
 		requiredIngredients.add(Celery);
 		requiredIngredients.add(Ranch);
-		Ingredient[] wingIngredients = new Ingredient[requiredIngredients.size()];
-		requiredIngredients.toArray(wingIngredients);
+		ArrayList<Ingredient> wingIngredients = new ArrayList<Ingredient>(requiredIngredients.size());
+		for(Ingredient ing: requiredIngredients) {
+			wingIngredients.add(ing);
+		}
 		Wings = new Dish("Wings", wingIngredients);
 		Dishes.add(Wings);
 		requiredIngredients.clear();
@@ -337,8 +341,10 @@ public class OrderPageGUI extends JFrame {
 		requiredIngredients.add(Lettuce);
 		requiredIngredients.add(Mustard);
 		requiredIngredients.add(Ketchup);
-		Ingredient[] burgerIngredients = new Ingredient[requiredIngredients.size()];
-		requiredIngredients.toArray(burgerIngredients);
+		ArrayList<Ingredient> burgerIngredients = new ArrayList<Ingredient>(requiredIngredients.size());
+		for(Ingredient ing: requiredIngredients) {
+			burgerIngredients.add(ing);
+		}
 		Burger = new Dish("Burger", burgerIngredients);
 		Dishes.add(Burger);
 		requiredIngredients.clear();
@@ -348,8 +354,10 @@ public class OrderPageGUI extends JFrame {
 		requiredIngredients.add(Lettuce);
 		requiredIngredients.add(Tomato);
 		requiredIngredients.add(Mayo);
-		Ingredient[] chickenSandwichIngredients = new Ingredient[requiredIngredients.size()];
-		requiredIngredients.toArray(chickenSandwichIngredients);
+		ArrayList<Ingredient> chickenSandwichIngredients = new ArrayList<Ingredient>(requiredIngredients.size());
+		for(Ingredient ing: requiredIngredients) {
+			chickenSandwichIngredients.add(ing);
+		}
 		grilledChickenSandwich = new Dish("Grilled Chicken Sandwich", chickenSandwichIngredients);
 		Dishes.add(grilledChickenSandwich);
 		requiredIngredients.clear();
@@ -358,8 +366,10 @@ public class OrderPageGUI extends JFrame {
 		requiredIngredients.add(Crust);
 		requiredIngredients.add(Pepperoni);
 		requiredIngredients.add(marinaraSauce);
-		Ingredient[] pizzaIngredients = new Ingredient[requiredIngredients.size()];
-		requiredIngredients.toArray(pizzaIngredients);
+		ArrayList<Ingredient> pizzaIngredients = new ArrayList<Ingredient>(requiredIngredients.size());
+		for(Ingredient ing: requiredIngredients) {
+			pizzaIngredients.add(ing);
+		}
 		Dish Pizza = new Dish("Pizza", pizzaIngredients);
 		Dishes.add(Pizza);
 		requiredIngredients.clear();
@@ -368,16 +378,20 @@ public class OrderPageGUI extends JFrame {
 		
 		//////////////DRINK DISHES
 		requiredIngredients.add(Water);
-		Ingredient[] waterIngredients = new Ingredient[requiredIngredients.size()];
-		requiredIngredients.toArray(waterIngredients);
+		ArrayList<Ingredient> waterIngredients = new ArrayList<Ingredient>(requiredIngredients.size());
+		for(Ingredient ing: requiredIngredients) {
+			waterIngredients.add(ing);
+		}
 		DWater = new Dish("Water",waterIngredients);
 		Dishes.add(DWater);
 		requiredIngredients.clear();
 		
 		requiredIngredients.add(Water);
 		requiredIngredients.add(Syrup);
-		Ingredient[] sodaIngredients = new Ingredient[requiredIngredients.size()];
-		requiredIngredients.toArray(sodaIngredients);
+		ArrayList<Ingredient> sodaIngredients = new ArrayList<Ingredient>(requiredIngredients.size());
+		for(Ingredient ing: requiredIngredients) {
+			sodaIngredients.add(ing);
+		}
 		Soda = new Dish("Soda", sodaIngredients);
 		Dishes.add(Soda);
 		requiredIngredients.clear();
@@ -385,12 +399,20 @@ public class OrderPageGUI extends JFrame {
 		requiredIngredients.add(Water);
 		requiredIngredients.add(Tea);
 		requiredIngredients.add(Syrup);
-		Ingredient[] teaIngredients = new Ingredient[requiredIngredients.size()];
-		requiredIngredients.toArray(teaIngredients);
+		ArrayList<Ingredient> teaIngredients = new ArrayList<Ingredient>(requiredIngredients.size());
+		for(Ingredient ing: requiredIngredients) {
+			teaIngredients.add(ing);
+		}
 		icedTea = new Dish("Iced Tea", teaIngredients);
 		Dishes.add(icedTea);
 		requiredIngredients.clear();
 		////////////END DRINK DISHES
+	
+		//take the dishes and ingredients and allow all classes to have them using the restaraunt info class
+		RestarauntInfo.setDishes(Dishes);
+		RestarauntInfo.setIngredients(Ingredients);
+	
+	
 	}
 
 	

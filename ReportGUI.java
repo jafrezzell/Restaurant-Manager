@@ -21,7 +21,7 @@ public class ReportGUI extends JFrame {
 	double wagesSpent;
 	double foodSpent;
 	double foodEarned;
-	Dish popDish;
+	double netIncome;
 	
 	DecimalFormat format;
 	
@@ -35,8 +35,8 @@ public class ReportGUI extends JFrame {
 	private JTextField txtFoodIn;
 	private JTextField txtFoodOut;
 	private JTextField txtWagesOut;
-	private JTextField txtPopDish;
-	private JLabel lblPopDish;
+	private JLabel lblNetIncome;
+	private JTextField txtNetIncome;
 
 	/**
 	 * Launch the application.
@@ -71,6 +71,7 @@ public class ReportGUI extends JFrame {
 		wagesSpent = 0;
 		foodSpent = 0;
 		foodEarned = 0;
+		netIncome = 0;
 		
 		//Gui
 		setTitle("Daily Report");
@@ -124,15 +125,15 @@ public class ReportGUI extends JFrame {
 		contentPane.add(txtWagesOut);
 		txtWagesOut.setColumns(10);
 		
-		lblPopDish = new JLabel("Most Popular Dish:");
-		lblPopDish.setBounds(26, 301, 247, 33);
-		contentPane.add(lblPopDish);
+		lblNetIncome = new JLabel("Net Income:");
+		lblNetIncome.setBounds(26, 301, 247, 33);
+		contentPane.add(lblNetIncome);
 		
-		txtPopDish = new JTextField();
-		txtPopDish.setEditable(false);
-		txtPopDish.setBounds(83, 347, 559, 39);
-		contentPane.add(txtPopDish);
-		txtPopDish.setColumns(10);
+		txtNetIncome = new JTextField();
+		txtNetIncome.setEditable(false);
+		txtNetIncome.setBounds(406, 298, 236, 39);
+		contentPane.add(txtNetIncome);
+		txtNetIncome.setColumns(10);
 		
 		format = new DecimalFormat("###.##");
 		
@@ -161,10 +162,6 @@ public class ReportGUI extends JFrame {
 		setLabels();
 	}
 	
-	public void setPopDish(Dish d) {
-		popDish = d;
-		setLabels();
-	}
 	
 	private String getFoodEarned() {
 		//return format.format(foodEarned);
@@ -179,14 +176,15 @@ public class ReportGUI extends JFrame {
 		return "$" + format.format(wagesSpent);
 	}
 	
-	private String getPopDish() {
-		return popDish.getDishName();
+	private String getNetIncome() {
+		return "$" + format.format(foodEarned - foodSpent - wagesSpent);
 	}
 	
 	private void setLabels() {
 		txtFoodIn.setText(getFoodEarned());
 		txtFoodOut.setText(getFoodSpent());
 		txtWagesOut.setText(getWagesSpent());
+		txtNetIncome.setText(getNetIncome());
+		
 	}
-	
 }
