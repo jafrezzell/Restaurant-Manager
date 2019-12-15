@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 /**
  * 
- * @author jafre
+ * @author Joshua Frezzell
  *Class that represents the specified dish ordered by the customer and prepared by the chef
  */
 public class Dish {
